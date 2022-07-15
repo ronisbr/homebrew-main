@@ -9,6 +9,7 @@ class Psopt < Formula
   depends_on "cmake" => :build
   depends_on "col-pack"
   depends_on "gcc" => :build
+  depends_on "ipopt-gcc"
 
   def install
     gcc = Formula["gcc"]
@@ -21,7 +22,7 @@ class Psopt < Formula
     chdir "build" do
       system "cmake", "..", "-DBUILD_EXAMPLES=ON", *std_cmake_args
       system "make", "install"
-      prefix.install "examples"
+      doc.install "examples"
     end
   end
 

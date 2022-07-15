@@ -1,7 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
-# A graph coloring algorithm package.
 class ColPack < Formula
   desc "Graph Coloring Algorithm Package"
   homepage "https://github.com/CSCsw/ColPack"
@@ -24,11 +20,11 @@ class ColPack < Formula
     system "./configure", "--prefix=#{prefix}", "--enable-examples"
     system "make", "install"
 
-    prefix.install "Graphs"
+    doc.install "Graphs"
   end
 
   test do
-    chdir prefix do
+    chdir doc do
       system "./examples/Basic/color_graph_using_GraphColoringInterface"
     end
   end

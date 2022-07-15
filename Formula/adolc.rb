@@ -29,12 +29,6 @@ class Adolc < Formula
   end
 
   test do
-    chdir prefix do
-      system "true"
-      # system "./examples/detexam <<< 4"
-      # system "./examples/odexam <<< 4"
-      # system "./examples/powexam <<< 10"
-      # system "./examples/speelpenning <<< 10"
-    end
+    system "true"
   end
 end
