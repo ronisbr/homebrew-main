@@ -14,6 +14,7 @@ class IpoptGcc < Formula
 
   resource "mumps" do
     url "http://mumps.enseeiht.fr/MUMPS_5.5.0.tar.gz"
+    mirror "http://deb.debian.org/debian/pool/main/m/mumps/mumps_5.5.0.orig.tar.gz"
     sha256 "e54d17c5e42a36c40607a03279e0704d239d71d38503aab68ef3bfe0a9a79c13"
 
     patch do
